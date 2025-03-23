@@ -9,7 +9,6 @@
 // # -> transform all numbers to 7
 // / -> divide all numbers by 2 and round up
 // % -> verify if is pair or even, if is pair transform to 0 and if is even transform to 1
-// hello test
 function transformString(str) {
   const firstChar = str[0];
   const lastChar = str[str.length - 1];
