@@ -50,3 +50,8 @@
 - Como outras pessoas resolveram esse problema?
 
 # Problem Solving Patterns
+
+## Multiple Pointers Pattern
+
+- 2 references (indexes)
+
