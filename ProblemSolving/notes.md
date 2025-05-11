@@ -55,3 +55,13 @@
 
 - 2 references (indexes)
 
+## Sliding Window Pattern:
+
+- Create a window, a number or an array from one position to another;
+- example: we will have a interval inside a array, and we can move both the edges forward, changing the interval, creating the "sliding window"
+
+## Divide and Conquer Pattern
+
+- Divide a dataset into smaller parts, and then repeat the process with subset of data
+- this pattern can decrease time complexity
+

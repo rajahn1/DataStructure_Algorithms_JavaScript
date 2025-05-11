@@ -91,3 +91,41 @@ let uniqueValuesArr = [1, 1, 1, 2, 2, 2, 2, 3, 3, 4, 4, 5, 6, 7, 8];
 let uniqueValuesCount = coutUniqueValues(uniqueValuesArr);
 console.log("Unique values count: ", uniqueValuesCount);
 
+// Calculate the highest sum of the n consecutive elements inside a array
+function maxSubarraySum(arrNumbers, n) {
+  let maxSum = 0;
+  let tempSum = 0;
+
+  if (arrNumbers.length < 0) return null;
+
+  for (let i = 0; i < n; i++) {
+    maxSum += arrNumbers[i];
+  }
+
+  tempSum = maxSum;
+
+  for (let i = n; i < arrNumbers.length; i++) {
+    tempSum = tempSum - arrNumbers[i - n] + arrNumbers[i];
+    maxSum = Math.max(maxSum, tempSum);
+  }
+
+  return maxSum;
+}
+
+let maxSumArr = [1, 2, 5, 6, 3, 4, 5, 6, 9, 2, 1];
+console.log("Max sum func: ", maxSubarraySum(maxSumArr, 3));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
