@@ -1,20 +1,21 @@
 
-//  Given two positive integers, return if they have the same frequency
-// Example: 123 and 321 or 312
-//  Time O(N)
-function sameFrequency(num1, num2) {
-  let num1Str = num1.toLocaleString();
-  let num2Str = num2.toLocaleString();
+function areThereDuplicates(arr) {
+  let lookUp = {};
 
-  if (num1Str.length != num2Str.length) return false;
+  for (item of arr) {
+    lookUp[item] = (lookUp[item] || 0) + 1;
+  }
 
-  for (let i = 0; i < num1Str.length; i++) {
-    let char = num1Str[i];
-    let char2 = num2Str[i];
+  for (key in lookUp) {
+    if (lookUp[key] > 1) return true;
   }
 
   return false;
 }
 
-console.log(sameFrequency(300, 32));
+let arrNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 1];
+let arrChars = ["a", "b", "c", "g", "f"];
+
+console.log(areThereDuplicates(arrChars));
+
 
