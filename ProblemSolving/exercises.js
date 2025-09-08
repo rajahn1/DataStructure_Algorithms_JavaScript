@@ -180,6 +180,9 @@ function findSubArrayMaxSum(arrNumbers, elements) {
   return maxSum;
 }
 
+function miniSubArrayLen() {
+
+}
 
 
 
