@@ -180,9 +180,36 @@ function findSubArrayMaxSum(arrNumbers, elements) {
   return maxSum;
 }
 
-function miniSubArrayLen() {
 
+// accepts a array of positive integers and a positive integer
+// should return the minimum lenght of a subarray
+//  that the sum results the positive integer, or greater then
+// if there isnt, return 0
+const positiveArr = [1, 5, 2, 3, 10, 4, 20];
+const positiveInteger = 7;
+
+function minSubArrayLen(arr, num) {
+  if (arr.length == 0) return 0;
+
+
+  let sum = 0;
+  let lenghtCounter = 0;
+
+
+  // sort desc
+  arr.sort((a, b) => b - a);
+
+  for (let i = 0; i < arr.length; i++) {
+    const currentElement = arr[i];
+    if (currentElement > num || currentElement == num) return 1;
+
+    sum += currentElement;
+    lenghtCounter++
+    if (sum == num) return lenghtCounter;
+  }
 }
+
+console.log(`miniSubArrayLen: >> ${minSubArrayLen([2, 3, 1, 2, 4, 3], 7)} << `);
 
 
 
